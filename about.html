@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>PostersofToronto</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+		}
+
+		/* Footer customization */
+		footer {
+			background: #100;
+			color: white;
+			padding: 15px;
+			clear: both;
+			text-align: center;
+		}
+
+		footer .logo {
+			display: none; /* hide logo in footer */
+		}
+
+		footer .nav {
+			float: none; /* remove float for footer nav */
+		}
+
+		footer a {
+			color: white;
+			text-decoration: none;
+			margin: 0 8px;
+		}
+
+		footer a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<!-- Header -->
+	<div id="header"></div>
+
+	<!-- Main content -->
+	<main>
+       <p>This is the <b>About</b> page</p> 
+	</main>
+
+	<!-- Footer -->
+	<footer id="footer"></footer>
+
+	<script>
+		// Load header
+		fetch('header.html')
+			.then(res => res.text())
+			.then(html => document.getElementById('header').innerHTML = html);
+
+		// Load same header as footer (logo hidden via CSS)
+		fetch('header.html')
+			.then(res => res.text())
+			.then(html => document.getElementById('footer').innerHTML = html);
+	</script>
+
+</body>
+</html>
