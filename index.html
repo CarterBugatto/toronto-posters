@@ -55,11 +55,11 @@
 
 	<div id="header"></div>
 
-
 	<main>
 		<img src="images/ocad.jpg" style="width: 55vw; min-width: 450px;">
-		<h2>Subheading 2</h2>
-		<blockquote><i>"Test Block Quote"</i></blockquote>
+		<h2 style="text-align:center"> This Website is about...</h2>
+		<blockquote style="text-align:center"><i>"Test Block Quote"</i></blockquote>
+		<div id="intextbutton"></div>
 		<p>This is the website of <b>Carter</b></p>
 		<ol>
 			<li>List test</li>
@@ -77,7 +77,10 @@
 		fetch('header.html')
 			.then(res => res.text())
 			.then(html => document.getElementById('header').innerHTML = html);
-
+		
+		fetch('intextbutton.html')
+			.then(res => res.text())
+			.then(html => document.getElementById('intextbutton').innerHTML = html);
 
 		fetch('footer.html')
 			.then(res => res.text())
