@@ -13,7 +13,12 @@
 			margin: 0;
 		}
 
-		/* Footer customization */
+		main {
+			margin-left: 35px;
+			margin-right: 35px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
 		footer {
 			background: #100;
 			color: white;
@@ -23,11 +28,11 @@
 		}
 
 		footer .logo {
-			display: none; /* hide logo in footer */
+			display: none; 
 		}
 
 		footer .nav {
-			float: none; /* remove float for footer nav */
+			float: none; 
 		}
 
 		footer a {
@@ -44,24 +49,22 @@
 
 <body>
 
-	<!-- Header -->
+
 	<div id="header"></div>
 
-	<!-- Main content -->
 	<main>
         <p>This is the <b>Gallery</b> page</p>
 	</main>
 
-	<!-- Footer -->
+
 	<footer id="footer"></footer>
 
 	<script>
-		// Load header
 		fetch('header.html')
 			.then(res => res.text())
 			.then(html => document.getElementById('header').innerHTML = html);
 
-		// Load same header as footer (logo hidden via CSS)
+
 		fetch('header.html')
 			.then(res => res.text())
 			.then(html => document.getElementById('footer').innerHTML = html);

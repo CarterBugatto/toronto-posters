@@ -7,47 +7,59 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>PostersofToronto</title>
 	<link rel="stylesheet" href="style.css">
+	
 	<style>
+		
 		body {
 			font-family: Arial, sans-serif;
 			margin: 0;
 		}
-
-		/* Footer customization */
+		
+		main {
+			margin-left: 35px;
+			margin-right: 35px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		
 		footer {
 			background: #100;
 			color: white;
 			padding: 15px;
 			clear: both;
 			text-align: center;
+			
 		}
 
 		footer .logo {
-			display: none; /* hide logo in footer */
+			display: none; 	
 		}
 
-		footer .nav {
-			float: none; /* remove float for footer nav */
+		footer .nav {	
+			float: none; 
 		}
 
 		footer a {
 			color: white;
 			text-decoration: none;
 			margin: 0 8px;
+			
+			
 		}
 
 		footer a:hover {
 			text-decoration: underline;
 		}
+		
 	</style>
 </head>
 
 <body>
+	
 
-	<!-- Header -->
 	<div id="header"></div>
 
-	<!-- Main content -->
+
 	<main>
 		<img src="images/ocad.jpg" style="width: 55vw; min-width: 450px;">
 		<h2>Subheading 2</h2>
@@ -61,16 +73,16 @@
 		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
 	</main>
 
-	<!-- Footer -->
+
 	<footer id="footer"></footer>
 
 	<script>
-		// Load header
+
 		fetch('header.html')
 			.then(res => res.text())
 			.then(html => document.getElementById('header').innerHTML = html);
 
-		// Load same header as footer (logo hidden via CSS)
+
 		fetch('header.html')
 			.then(res => res.text())
 			.then(html => document.getElementById('footer').innerHTML = html);
