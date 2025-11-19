@@ -10,14 +10,15 @@
 </head>
 
 <body>
-
 	<div id="header"></div>
-
 	<main>
   		<div>
     		<a href="gallery.html">
 				<img class="center-img" src="images/emptyposter.png" style="width:25%">
   			</a>
+			<p style="text-align:center">
+				name/theme/date
+			</p>
 		</div>		
 		
 		<h2 style="text-align:center"> This Website is about...</h2>
@@ -47,6 +48,5 @@
 			.then(res => res.text())
 			.then(html => document.getElementById('footer').innerHTML = html);
 	</script>
-
 </body>
 </html>
