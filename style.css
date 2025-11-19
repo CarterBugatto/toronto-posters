@@ -41,6 +41,10 @@ footer a {
   margin-right: auto;
 }
 
+.poster-img {
+  width: 22%;
+}
+
 * {box-sizing:border-box}
 
 .text {

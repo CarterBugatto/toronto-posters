@@ -20,10 +20,8 @@
 		
 		<h2>Poster 1</h2>
 		
-		
 		<div>
 			<img src="images/emptyposter.png" style="width:40%">
-	
 		</div>
 	</main>
 
@@ -34,12 +32,9 @@
 		fetch('header.html')
 			.then(res => res.text())
 			.then(html => document.getElementById('header').innerHTML = html);
-
-
 		fetch('footer.html')
 			.then(res => res.text())
 			.then(html => document.getElementById('footer').innerHTML = html);
 	</script>
-
 </body>
 </html>
