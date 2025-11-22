@@ -8,6 +8,7 @@ main {
 			margin-right: 35px;
 			margin-top: 20px;
 			margin-bottom: 40px;
+			line-height: 22px;
 		}
 		
 footer {
@@ -18,10 +19,12 @@ footer {
 			text-align: center;
 			
 		}
-
-footer .logo {
-			display: none;
-		}
+.logo {
+	font-size: 16px;
+	}
+.logo:after {
+	content: "Posters of Toronto";
+	}
 
 footer .nav {	
 			float: none; 
@@ -30,15 +33,14 @@ footer .nav {
 footer a {
 			color: white;
 			text-decoration: none;
-			margin: 0 45px;
-			
-			
+			margin: 0 45px;	
 		}
 		
 .center-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 350px;
 }
 
 .poster-img {
@@ -48,15 +50,51 @@ footer a {
 * {box-sizing:border-box}
 
 .text {
-  color: #f2f2f2;
+  color: #000000;
   font-size: 15px;
   padding: 8px 12px;
-  position: absolute;
   bottom: 8px;
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
+@media (max-width: 768px){
+	.text {
+		font-size:18px;
+	}
+}
+@media (max-width: 600px){
+	.text {
+		font-size:16px;
+	}
+	main {
+			margin-left: 15px;
+			margin-right: 15px;
+			line-height: 23px;
+		}
+}
+@media (max-width: 480px){
+	.text {
+		font-size:18px;
+	}
+	.logo:after {
+		content: "PT";
+	}
+	.center-img {
+		width: 270px;
+	}
+	main {
+		line-height: 25px;
+	}
+}
+@media (max-width: 320px){
+	.text {
+		font-size:14px;
+	}
+	.center-img {
+		width: 220px;
+	}
+}
 
 .numbertext {
   color: #f2f2f2;
