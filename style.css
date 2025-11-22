@@ -86,13 +86,24 @@ footer a {
 	main {
 		line-height: 25px;
 	}
+	footer a {
+		margin: 0 2px;
+	}
 }
 @media (max-width: 320px){
 	.text {
-		font-size:14px;
+		font-size:12px;
 	}
 	.center-img {
 		width: 220px;
+	}
+	footer a {
+		margin: 0 100px;
+	}
+	main {
+		margin-left: 5px;
+		margin-right: 5px;
+		line-height: 18px;
 	}
 }
 
