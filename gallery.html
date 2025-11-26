@@ -7,14 +7,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>PostersofToronto</title>
 	<link rel="stylesheet" href="style.css">
-	
 </head>
 
 <body>
-
-
 	<div id="header"></div>
-
 	<main>
 		<h1>Gallery</h1>
 			<div class="img-grid">
@@ -38,8 +34,7 @@
 				</a>
 			</div>
 	</main>
-
-
+x
 	<footer id="footer"></footer>
 
 	<script>
@@ -47,11 +42,9 @@
 			.then(res => res.text())
 			.then(html => document.getElementById('header').innerHTML = html);
 
-
 		fetch('footer.html')
 			.then(res => res.text())
 			.then(html => document.getElementById('footer').innerHTML = html);
 	</script>
-
 </body>
 </html>

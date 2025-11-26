@@ -1,3 +1,4 @@
+* {box-sizing:border-box}
 body {
 			font-family: Arial, sans-serif;
 			margin: 0;
@@ -9,15 +10,13 @@ main {
 			margin-top: 20px;
 			margin-bottom: 40px;
 			line-height: 22px;
-		}
-		
+		}		
 footer {
 			background: #100;
 			color: white;
 			padding: 25px;
 			clear: both;
 			text-align: center;
-			
 		}
 .logo {
 	font-size: 16px;
@@ -25,29 +24,23 @@ footer {
 .logo:after {
 	content: "Posters of Toronto";
 	}
-
 footer .nav {	
 			float: none; 
 		}
-
 footer a {
 			color: white;
 			text-decoration: none;
 			margin: 0 45px;	
 		}
-		
 .center-img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 350px;
 }
-
 .poster-img {
-  width: 22%;
+	width: 22%;
 }
-
-* {box-sizing:border-box}
 
 .text {
   color: #000000;
@@ -57,11 +50,88 @@ footer a {
   width: 100%;
   text-align: left;
 }
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+.img-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 9px;
+}
+.img-grid a {
+	width: calc(25% - 9px);
+	display: block;
+}
+.img-grid img {
+	width: 100%;
+	height: auto;
+	border-radius: 4px;
+	display: block;
+}
+
+
+
+.navbar {
+  overflow: hidden;
+}
+.navbar a {
+ 
+  font-size: 16px;
+  text-align: right;
+  text-decoration: none;
+}
+.dropdown {
+	float: right;
+	overflow: hidden;
+	display: none;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #000000;
+  padding: 12px 12px;
+	
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: #cbcbcb;
+	color: black;
+	visibility: hidden;
+}
+.dropdown-content {
+  display: none;
+  background-color: #ffffff;
+  min-width: 100px;
+}
+.dropdown-content a {
+	display: block;
+	color: black;
+	padding: 10px 10px;
+	text-decoration: none;
+	text-align: right;
+}
+.dropdown-content a:hover {
+  background-color: #cbcbcb;
+	
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.headerlink{
+	display: flex;
+}
+
 
 @media (max-width: 768px){
 	.text {
 		font-size:18px;
 	}
+
 }
 @media (max-width: 600px){
 	.text {
@@ -72,6 +142,9 @@ footer a {
 			margin-right: 15px;
 			line-height: 23px;
 		}
+	.img-grid a {
+		width: calc(33.333% - 9px);
+	}
 }
 @media (max-width: 480px){
 	.text {
@@ -89,8 +162,17 @@ footer a {
 	footer a {
 		margin: 0 2px;
 	}
+	.img-grid a {
+		width: 100%;
+	}
 }
 @media (max-width: 320px){
+	.headerlink{
+		display: none;
+	}
+	dropdown flexbox {
+		display: noneock;
+	}
 	.text {
 		font-size:12px;
 	}
@@ -103,33 +185,10 @@ footer a {
 	main {
 		margin-left: 5px;
 		margin-right: 5px;
-		line-height: 18px;
+		line-height: 22px;
 	}
-}
-
-.numbertext {
-	color: #f2f2f2;
-	font-size: 12px;
-	padding: 8px 12px;
-	position: absolute;
-	top: 0;
-}
-
-
-.img-grid {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 9px;
-}
-
-.img-grid a {
-	width: calc(33.333% - 9px);
-	display: block;
-}
-
-.img-grid img {
-	width: 100%;
-	height: auto;
-	border-radius: 4px;
-	display: block;
+	.dropdown {
+		display: flex;
+	}
+		
 }
