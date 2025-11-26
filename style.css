@@ -1,4 +1,3 @@
-* {box-sizing:border-box}
 body {
 			font-family: Arial, sans-serif;
 			margin: 0;
@@ -24,6 +23,10 @@ footer {
 .logo:after {
 	content: "Posters of Toronto";
 	}
+
+.icon{
+	width: 22px;
+}
 footer .nav {	
 			float: none; 
 		}
@@ -41,7 +44,6 @@ footer a {
 .poster-img {
 	width: 22%;
 }
-
 .text {
   color: #000000;
   font-size: 15px;
@@ -57,6 +59,7 @@ footer a {
 	position: absolute;
 	top: 0;
 }
+
 .img-grid {
 	display: flex;
 	flex-wrap: wrap;
@@ -72,14 +75,10 @@ footer a {
 	border-radius: 4px;
 	display: block;
 }
-
-
-
 .navbar {
   overflow: hidden;
 }
 .navbar a {
- 
   font-size: 16px;
   text-align: right;
   text-decoration: none;
@@ -90,17 +89,15 @@ footer a {
 	display: none;
 }
 .dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: #000000;
-  padding: 12px 12px;
-	
+	display: flex;
+	border: none;
+	outline: none;
+	color: #000000;
+	padding: 10px 10px;	
 }
 .navbar a:hover, .dropdown:hover .dropbtn {
 	background-color: #cbcbcb;
 	color: black;
-	visibility: hidden;
 }
 .dropdown-content {
   display: none;
@@ -121,11 +118,13 @@ footer a {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
+.header{
+	padding-left: 15px;
+}
 .headerlink{
 	display: flex;
+	padding-right: 10px;
 }
-
 
 @media (max-width: 768px){
 	.text {
@@ -146,6 +145,7 @@ footer a {
 		width: calc(33.333% - 9px);
 	}
 }
+
 @media (max-width: 480px){
 	.text {
 		font-size:18px;
