@@ -1,8 +1,33 @@
+@font-face {
+  font-family: "Inter";
+  src: url(font/Inter_18pt-Regular.ttf) format("truetype");
+  font-weight: 400; /* regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(font/Inter_18pt-Bold.ttf) format("truetype");
+  font-weight: 700; /* bold */
+  font-style: normal;
+}
+
+.header-left .site-title {
+  font-family: "Pixelout", sans-serif;
+  font-size: 28px;
+  color: #000000;
+  text-decoration: none;
+  flex-shrink: 0;                /* logo never shrinks */
+}
+
 body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-		}
-		
+  font-family: "Inter", inter, sans-serif;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
 main {
 			margin-left: 35px;
 			margin-right: 35px;
@@ -11,18 +36,31 @@ main {
 			line-height: 22px;
 		}		
 footer {
-			background: #100;
-			color: white;
+			background: #000000;
+			color: #000000;
 			padding: 25px;
 			clear: both;
 			text-align: center;
 		}
-.logo {
-	font-size: 16px;
-	}
-.logo:after {
-	content: "Posters of Toronto";
-	}
+
+
+.site-title {
+  display: inline-block;   /* prevents collapsing */
+  white-space: nowrap;     /* keeps it on ONE line */
+  position: relative;
+  color: transparent;
+  font-family: "Pixelout", sans-serif;
+  font-size: 28px;
+  text-decoration: none;
+}
+.site-title:after {
+  content: "Posters of Toronto";   /* Desktop text */
+  color: #000000;
+  
+  left: 0;
+  top: 0;
+}
+
 
 .icon{
 	width: 22px;
@@ -31,7 +69,7 @@ footer .nav {
 			float: none; 
 		}
 footer a {
-			color: white;
+			color: black;
 			text-decoration: none;
 			margin: 0 45px;	
 		}
@@ -85,8 +123,8 @@ footer a {
 }
 .dropdown {
 	float: right;
-	overflow: hidden;
 	display: none;
+	
 }
 .dropdown .dropbtn {
 	display: flex;
@@ -97,26 +135,31 @@ footer a {
 }
 .navbar a:hover, .dropdown:hover .dropbtn {
 	background-color: #cbcbcb;
-	color: black;
+	color: #000000;
+	overflow: visible;
+	
 }
 .dropdown-content {
   display: none;
   background-color: #ffffff;
   min-width: 100px;
+	
 }
 .dropdown-content a {
 	display: block;
-	color: black;
+	color: #000000;
 	padding: 10px 10px;
 	text-decoration: none;
 	text-align: right;
+	overflow: visible;
+	font-weight: bold;
 }
 .dropdown-content a:hover {
-  background-color: #cbcbcb;
+	background-color: #cbcbcb;
 	
 }
 .dropdown:hover .dropdown-content {
-  display: block;
+	display: block;
 }
 .header{
 	padding-left: 15px;
@@ -150,7 +193,7 @@ footer a {
 	.text {
 		font-size:18px;
 	}
-	.logo:after {
+	.site-title:after {
 		content: "PT";
 	}
 	.center-img {
@@ -183,12 +226,248 @@ footer a {
 		margin: 0 100px;
 	}
 	main {
-		margin-left: 5px;
-		margin-right: 5px;
-		line-height: 22px;
+		margin-left: 0px;
+		margin-right: 0px;
+		line-height: 22px;	
 	}
 	.dropdown {
 		display: flex;
 	}
 		
 }
+
+.background-text {
+	font-family: "Pixelout", sans-serif;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+	
+  font-size: 25vw;        /* huge responsive size */
+  font-weight: 100;
+  line-height: 0.5;
+  color: rgb(168, 204, 225);
+
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+
+  z-index: -100;             /* behind everything */
+}
+
+@font-face {
+  font-family: "Pixelout";
+  src: url("font/Pixelout.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Pixelout font for logo */
+@font-face {
+  font-family: "Pixelout";
+  src: url("font/Pixelout.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Header container */
+.header-container {
+  display: flex;
+  align-items: center;           /* vertical center logo + nav */
+  justify-content: space-between;/* logo left, nav right */
+  flex-wrap: wrap;               /* allow wrapping if needed */
+  background: #ffffff;
+  color: white;
+  padding: 20px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;   
+	font-weight: bold;/* spacing between links + dropdown */
+}
+
+.headerlink a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+	margin-right: 12px;
+}
+
+/* Dropdown styling (keeps your existing dropdown) */
+.navbar .dropbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header-right {
+    flex-wrap: wrap;                /* allow nav to wrap if needed */
+  }
+}
+
+
+.banner{
+    width: 100%;
+    height: 110vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider{
+	
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+	
+    opacity: 0;
+    animation: fadeIn 0.1s forwards, autoRun 25s linear infinite;
+    animation-delay: 0s, 0.8s;  /* fade first, then rotate */
+	
+    z-index: 2;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+	font-size: 10px;
+	color: black;
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;                  /* slightly transparent */
+    transition: opacity 0.1s ease; /* smooth fade */
+}
+
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.banner .slider .item img:hover {
+    opacity: 1;                     /* fully visible */
+}
+/*
+.banner .content h1{
+    font-family: 'ICA Rubrik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #000000;
+    position: relative;
+}
+.banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+.banner .content .author{
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+}
+.banner .content h2{
+    font-size: 3em;
+}
+.banner .content .model{
+    background-image: url(images/model.png);
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+*/
+@media screen and (max-width: 1023px) {
+	.banner{
+		height: 60vh;
+	}
+    .banner .slider{
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
+    }
+    .banner .content h1{
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 7em;
+    }
+    .banner .content .author{
+        color: #fff;
+        padding: 10px;
+        text-shadow: 0 10px 20px #000;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 780px) {
+	.banner{
+		height: 40vh;
+	}
+    .banner .slider{
+        width: 100px;
+        height: 150px;
+        left: calc(50% - 50px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(200px);
+    }
+    .banner .content h1{
+        font-size: 5em;
+    }
+}
+

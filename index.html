@@ -7,15 +7,36 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>PostersofToronto</title>
 	<link rel="stylesheet" href="style.css">
+	
+	<link rel="stylesheet" href="scroll-animate.css">
 </head>
 
+
+	
 <body>
+	<div class="background-text">PT</div>
+	
 	<div id="header"></div>
 	<main>
   		<div>
-    		<a href="gallery.html">
-				<img class="center-img" src="images/emptyposter.png">
-  			</a>
+			<div class="banner">
+		<a href="gallery.html">
+        <div class="slider" style="--quantity: 10">
+			
+				<div class="item" style="--position: 1"><img src="images/emptyposter.png" alt="">Poster1</div>
+				<div class="item" style="--position: 2"><img src="images/emptyposter.png" alt="">Poster2</div>
+				<div class="item" style="--position: 3"><img src="images/emptyposter.png" alt="">Poster3</div>
+				<div class="item" style="--position: 4"><img src="images/emptyposter.png" alt="">Poster4</div>
+				<div class="item" style="--position: 5"><img src="images/emptyposter.png" alt="">Poster5</div>
+				<div class="item" style="--position: 6"><img src="images/emptyposter.png" alt="">Poster6</div>
+				<div class="item" style="--position: 7"><img src="images/emptyposter.png" alt="">Poster7</div>
+				<div class="item" style="--position: 8"><img src="images/emptyposter.png" alt="">Poster8</div>
+				<div class="item" style="--position: 9"><img src="images/emptyposter.png" alt="">Poster9</div>
+				<div class="item" style="--position: 10"><img src="images/emptyposter.png" alt="">Poster10</div>
+				
+			</div>
+				</a>
+		</div>
 			<p style="text-align:center">
 				name/theme/date
 			</p>
@@ -48,5 +69,10 @@
 			.then(res => res.text())
 			.then(html => document.getElementById('footer').innerHTML = html);
 	</script>
+	
+	<script src="scroll-animate.js"></script>
+	
+	<div class="cursor"></div>
+	
 </body>
 </html>
