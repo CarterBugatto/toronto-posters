@@ -3,133 +3,133 @@
 		"id": 1,
 		"title": "DARE - Poster 1",
 		"image": "images/IMG_4428 (1).jpeg",
-		"description": "This is a description of poster 1.11111111111111111111111111111111111111111111111111111111",
+		"description": "Poster depicts child running with the text DARE sorrounding them. Disability care for children callout.",
 		"tags": ["social"]
 	},
 	{
 		"id": 2,
 		"title": "GREYDAY - Poster 2",
 		"image": "images/IMG_4428 (2).jpeg",
-		"description": "Description for poster 2.",
+		"description": "Poster for musical event with SUICIDEBOY$ headlinging. At BUDWEISER Stage on Saturday September 27th. Through Live Nation.",
 		"tags": ["music", "event"]
 	},
 	{
 		"id": 3,
 		"title": "ottobock - Poster 3",
 		"image": "images/IMG_4428.jpeg",
-		"description": "Another poster description.",
+		"description": "Vague AD depicting a sole person in a crowd. Overlayed UI shows digital message.",
 		"tags": ["product"]
 	},
 	{
 		"id": 4,
 		"title": "BURNA BOY - Poster 4",
 		"image": "images/IMG_4779.jpeg",
-		"description": "Another poster description.",
+		"description": "Poster for musical event featuring Burna Boy. At SCOTIABANK ARENA December 17th and 18th.",
 		"tags": ["music", "event"]
 	},
 	{
 		"id": 5,
 		"title": "Hallmark Musical - Poster 5",
 		"image": "images/IMG_4786.jpeg",
-		"description": "Another poster description.",
+		"description": "Poster for christmas Hallmark Musical. At the Royal Theatre on November 20th to January 4th.",
 		"tags": ["music","event"]
 	},
 	{
 		"id": 6,
 		"title": "Bird - Poster 6",
 		"image": "images/IMG_4788.jpeg",
-		"description": "Another poster description.",
+		"description": "Vague poster showing illustration of bird in colorful panels.",
 		"tags": [""]
 	},
 	{
 		"id": 7,
 		"title": "Black Friday - Poster 7",
 		"image": "images/IMG_4789.jpeg",
-		"description": "Another poster description.",
+		"description": "Crisscross of posters depicting Black Friday Sale. Shows image of crowd with Arabic lettering over english captions.",
 		"tags": ["product", "social", "event"]
 	},
 	{
 		"id": 8,
 		"title": "Clara La San - Poster 8",
 		"image": "images/IMG_4790.jpeg",
-		"description": "Another poster description.",
+		"description": "Vague message promoting music of Clara La San with QR Code.",
 		"tags": ["music"]
 	},
 	{
 		"id": 9,
 		"title": "Flavour Mania - Poster 9",
 		"image": "images/IMG_4791.jpeg",
-		"description": "Another poster description.",
+		"description": "Poster for wrestling eevent on October 22nd at 6:30PM. With QR Code.",
 		"tags": ["product"]
 	},
 	{
 		"id": 10,
 		"title": "Red - Poster 10",
 		"image": "images/IMG_4795.jpeg",
-		"description": "Another poster description.",
+		"description": "Vague spread of Red logo relating to Playboi Carti's Whole Lotta Red Album",
 		"tags": ["music"]
 	},
 	{
 		"id": 11,
 		"title": "Christmas - Poster 11",
 		"image": "images/IMG_4796.jpeg",
-		"description": "Another poster description.",
+		"description": "Set of Christmas themed quotes and vector illustrations advertising light product.",
 		"tags": ["product"]
 	},
 	{
 		"id": 12,
 		"title": "Mighty Protein - Poster 12",
 		"image": "images/IMG_4798.jpeg",
-		"description": "Another poster description.",
+		"description": "Large Protein Bar poster with statistics against packaging with bold text.",
 		"tags": ["product"]
 	},
 	{
 		"id": 13,
 		"title": "WWF - Poster 13",
 		"image": "images/IMG_4799 (1).jpeg",
-		"description": "Another poster description.",
+		"description": "Poster for plushy products of animals with proceeds going to WWF-Canada's conservation work.",
 		"tags": ["product", "social"]
 	},
 	{
 		"id": 14,
 		"title": "WIT - Poster 14",
 		"image": "images/IMG_4799.jpeg",
-		"description": "Another poster description.",
+		"description": "A Vague caption with figure and QR Code.",
 		"tags": [""]
 	},
 	{
 		"id": 15,
 		"title": "PRESSA - Poster 15",
 		"image": "images/IMG_4802.jpeg",
-		"description": "Another poster description.",
+		"description": "Poster promoting Music release by Pressa.",
 		"tags": ["music"]
 	},
 	{
 		"id": 16,
 		"title": "AUSTRA - Poster 16",
 		"image": "images/IMG_4803.jpeg",
-		"description": "Another poster description.",
+		"description": "Poster promoting prouct or music by AUSTRA with caption Chin Up Buttercup.",
 		"tags": ["music"]
 	},
 	{
 		"id": 17,
 		"title": "fred victor - Poster 17",
 		"image": "images/IMG_4804.jpeg",
-		"description": "Another poster description.",
+		"description": "Call to action to donate to help homeless people find shelter for fred victor company.",
 		"tags": ["social"]
 	},
 	{
 		"id": 18,
 		"title": "DAVID BLACKWOOD - Poster 18",
 		"image": "images/IMG_4805.jpeg",
-		"description": "Another poster description.",
+		"description": "Product, play or animation MYTH & LEGEND by David Blackwood. Shows illustration of large black whale in water. On now.",
 		"tags": ["product"]
 	},
 	{
 		"id": 19,
 		"title": "Price Tag - Poster 19",
 		"image": "images/IMG_4806.jpeg",
-		"description": "Another poster description.",
+		"description": "Call to action to donate and boost YMCA children participation.",
 		"tags": ["social"]
 	}
 ]
