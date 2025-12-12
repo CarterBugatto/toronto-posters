@@ -11,7 +11,10 @@
 </head>
 
 <body>
-
+	<input type="checkbox" id="toggle-dark" class="toggle-dark">
+	<label for="toggle-dark" class="toggle-btn"></label>
+	<div class="site">
+	
 	<div id="header"></div>
 	
 	<main>
@@ -85,7 +88,34 @@ fetch("posters.json")
 		}
 	});
 </script>
+		<script>
+const toggle = document.getElementById("toggle-dark");
+const site = document.querySelector(".site");
 
+// Apply saved preference on page load
+if (localStorage.getItem("darkMode") === "enabled") {
+  toggle.checked = true;
+  site.style.setProperty('--bg', '#000000');
+  site.style.setProperty('--text', '#ffffff');
+  site.style.setProperty('--accent', 'rgb(241, 145, 160)');
+}
 
+// Save preference when toggled
+toggle.addEventListener("change", () => {
+  if (toggle.checked) {
+    localStorage.setItem("darkMode", "enabled");
+    site.style.setProperty('--bg', '#000000');
+    site.style.setProperty('--text', '#ffffff');
+    site.style.setProperty('--accent', 'rgb(241, 145, 160)');
+  } else {
+    localStorage.setItem("darkMode", "disabled");
+    site.style.setProperty('--bg', 'white');
+    site.style.setProperty('--text', 'black');
+    site.style.setProperty('--accent', 'rgb(145, 205, 241)');
+  }
+});
+</script>
+
+	</div>
 </body>
 </html>

@@ -1,3 +1,54 @@
+:root {
+  --bg: white;
+  --text: black;
+  --accent: rgb(145, 205, 241); 
+}
+
+.dark {
+  --bg: #000000;
+  --text: #ffffff;
+  --accent: rgb(241, 145, 160);
+}
+
+/* hide checkbox */
+/* Hide the checkbox itself */
+.toggle-dark {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* toggle button */
+.toggle-btn {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;   /* move to bottom */      /* move to left */
+  
+  background: grey;
+  color: var(--bg);
+  padding: 25px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+
+/* THIS is the important part */
+.toggle-dark:checked ~ .site {
+  --bg: #000000;
+  --text: #ffffff;
+  --accent: rgb(241, 145, 160);
+}
+
+body, .site {
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1, h2, p, a, button, input {
+  color: var(--text);
+}
+
 @font-face {
 	font-family: "Inter";
 	src: url(font/Inter_18pt-Regular.ttf) format("truetype");
@@ -15,7 +66,7 @@
 .header-left .site-title {
 	font-family: "Pixelout", sans-serif;
 	font-size: 28px;
-	color: #000000;
+	color: var(--text);
 	text-decoration: none;
 	flex-shrink: 0;
 }
@@ -46,8 +97,8 @@ main {
 }
 
 footer {
-	background: #000000;
-	color: #000000;
+	background: var(--text);
+	color: var(--text);
 	padding: 25px;
 	clear: both;
 	text-align: center;
@@ -65,13 +116,13 @@ footer {
 
 .site-title:after {
 	content: "Posters of Toronto";
-	color: #000000;
+	color: var(--text);
 	left: 0;
 	top: 0;
 }
 
 .site-title:hover:after {
-	color: rgb(145, 205, 241);
+	color: var(--accent);
 }
 
 .icon {
@@ -84,18 +135,18 @@ footer .nav {
 
 
 footer a {
-	color: black;
+	color: var(--text);
 	text-decoration: none;
 	margin: 0 45px;
 }
 
 .footer-link{
-	color: white;
+	color: var(--bg);
 	font-weight: 500;
 }
 
 .footer-link:hover{
-	color: rgb(145, 205, 241);
+	color: var(--accent);
 }
 
 .center-img {
@@ -110,7 +161,7 @@ footer a {
 }
 
 .text {
-	color: #000000;
+	color: var(--text);
 	font-size: 15px;
 	padding: 8px 12px;
 	bottom: 8px;
@@ -120,17 +171,17 @@ footer a {
 
 .button{
 	text-decoration: none;
-	background-color: white;
-	color: black;
+	background-color: var(--bg);
+	color: var(--text);
 }
 .button:hover{
 	text-decoration: none;
-	background-color: rgb(145, 205, 241);
-	color: white;
+	background-color: var(--accent);
+	color: var(--bg);
 }
 
 .numbertext {
-	color: #f2f2f2;
+	color: var(--bg);
 	font-size: 12px;
 	padding: 8px 12px;
 	position: absolute;
@@ -174,25 +225,25 @@ footer a {
 	display: flex;
 	border: none;
 	outline: none;
-	color: #000000;
+	color: var(--text);
 	padding: 10px 10px;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-	background-color: #cbcbcb;
-	color: #000000;
+	background-color: var(--bg);
+	color: var(--text);
 	overflow: visible;
 }
 
 .dropdown-content {
 	display: none;
-	background-color: #ffffff;
+	background-color: var(--bg);
 	min-width: 100px;
 }
 
 .dropdown-content a {
 	display: block;
-	color: #000000;
+	color: var(--text);
 	padding: 10px 10px;
 	text-decoration: none;
 	text-align: right;
@@ -201,7 +252,7 @@ footer a {
 }
 
 .dropdown-content a:hover {
-	background-color: rgb(145, 205, 241);
+	background-color: var(--accent);
 }
 
 .dropdown:hover .dropdown-content {
@@ -227,8 +278,8 @@ footer a {
 .return-btn {
 	display: inline-block;
 	padding: 8px 18px;
-	background: #000000;
-	color: #ffffff;
+	background: var(--text);
+	color: var(--bg);
 	text-decoration: none;
 	font-size: 16px;
 	cursor: pointer;
@@ -236,9 +287,9 @@ footer a {
 }
 
 .return-btn:hover {
-	background: #ffffff;
-	color: #000000;
-	border: 2px solid #000;
+	background: var(--bg);
+	color: var(--text);
+	border: 2px solid var(--text);
 }
 
 #nextprev-btn-wrap {
@@ -251,8 +302,8 @@ footer a {
 .nextprev-btn {
 	display: inline-block;
 	padding-left: 60px;
-	background: #ffffff;
-	color: #000000;
+	background: var(--bg);
+	color: var(--text);
 	text-decoration: none;
 	font-size: 16px;
 	font-weight: 600;
@@ -260,8 +311,8 @@ footer a {
 }
 
 .nextprev-btn:hover {
-	background: #ffffff;
-	color: rgb(145, 205, 241);
+	background: var(--bg);
+	color: var(--accent);
 }
 
 .top-row {
@@ -298,7 +349,7 @@ footer a {
 	font-size: 25vw;
 	font-weight: 100;
 	line-height: 0.5;
-	color: rgb(145, 205, 241);
+	color: var(--accent);
 	pointer-events: none;
 	user-select: none;
 	white-space: nowrap;
@@ -324,8 +375,8 @@ footer a {
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	background: #ffffff;
-	color: white;
+	background: var(--bg);
+	color: var(--bg);
 	padding: 20px;
 }
 
@@ -337,11 +388,11 @@ footer a {
 }
 
 .header-right :hover{
-	color: rgb(145, 205, 241);
+	color: var(--accent);
 }
 
 .headerlink a {
-	color: #000000;
+	color: var(--text);
 	text-decoration: none;
 	font-size: 16px;
 	margin-right: 12px;
@@ -393,7 +444,7 @@ footer a {
 
 .banner .slider .item {
 	font-size: 10px;
-	color: black;
+	color: var(--text);
 	position: absolute;
 	inset: 0 0 0 0;
 	transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
@@ -432,11 +483,12 @@ footer a {
 
 .footer-txt{
 	display: flex;
-	justify-content: center;  /* centers items horizontally */
-	align-items: center;      /* centers items vertically if needed */
-	gap: 20px;                /* optional spacing between links */
-	flex-wrap: wrap;          /* allows wrapping on small screens */
-	text-align: center;       /* fallback for inline text */
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	text-align: center;
+	color: var(--bg);
 }
 .main-title{
 	padding-top: 0;
@@ -450,7 +502,7 @@ footer a {
 	justify-content: right;
 	display: flex;
 	font-weight: bold;
-	accent-color: black;
+	accent-color: var(--text);
 }
 
 @media screen and (max-width: 1023px) {
@@ -468,13 +520,13 @@ footer a {
 	.banner .content h1 {
 		text-align: center;
 		width: 100%;
-		text-shadow: 0 10px 20px #000;
+		text-shadow: 0 10px 20px var(--text);
 		font-size: 7em;
 	}
 	.banner .content .author {
-		color: #fff;
+		color: var(--bg);
 		padding: 10px;
-		text-shadow: 0 10px 20px #000;
+		text-shadow: 0 10px 20px var(--text);
 		z-index: 2;
 		max-width: unset;
 		width: 100%;
