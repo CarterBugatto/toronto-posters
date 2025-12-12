@@ -1,12 +1,10 @@
 /* Universal scroll-scale animation */
 .scroll-animate {
-  transform: scale(0.95);
   opacity: 0.8;
   transition: transform 0.4s ease-out, opacity 0.4s ease-out;
   will-change: transform;
 }
 
 .scroll-animate.in-view {
-  transform: scale(1);
-  opacity: 1;
+  opacity: 2;
 }

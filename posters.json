@@ -1,72 +1,135 @@
 [
 	{
 		"id": 1,
-		"title": "Poster 1",
-		"image": "images/emptyposter.png",
+		"title": "DARE - Poster 1",
+		"image": "images/IMG_4428 (1).jpeg",
 		"description": "This is a description of poster 1.11111111111111111111111111111111111111111111111111111111",
-		"tags": ["vintage", "colorful"]
+		"tags": ["social"]
 	},
 	{
 		"id": 2,
-		"title": "Poster 2",
-		"image": "images/emptyposter.png",
+		"title": "GREYDAY - Poster 2",
+		"image": "images/IMG_4428 (2).jpeg",
 		"description": "Description for poster 2.",
-		"tags": ["vintage"]
+		"tags": ["music", "event"]
 	},
 	{
 		"id": 3,
-		"title": "Poster 3",
-		"image": "images/emptyposter.png",
+		"title": "ottobock - Poster 3",
+		"image": "images/IMG_4428.jpeg",
 		"description": "Another poster description.",
-		"tags": ["vintage"]
+		"tags": ["product"]
 	},
 	{
 		"id": 4,
-		"title": "Poster 4",
-		"image": "images/emptyposter.png",
+		"title": "BURNA BOY - Poster 4",
+		"image": "images/IMG_4779.jpeg",
 		"description": "Another poster description.",
-		"tags": ["vintage"]
+		"tags": ["music", "event"]
 	},
 	{
 		"id": 5,
-		"title": "Poster 5",
-		"image": "images/emptyposter.png",
+		"title": "Hallmark Musical - Poster 5",
+		"image": "images/IMG_4786.jpeg",
 		"description": "Another poster description.",
-		"tags": ["vintage"]
+		"tags": ["music","event"]
 	},
 	{
 		"id": 6,
-		"title": "Poster 6",
-		"image": "images/emptyposter.png",
+		"title": "Bird - Poster 6",
+		"image": "images/IMG_4788.jpeg",
 		"description": "Another poster description.",
-		"tags": ["colorful"]
+		"tags": [""]
 	},
 	{
 		"id": 7,
-		"title": "Poster 7",
-		"image": "images/emptyposter.png",
+		"title": "Black Friday - Poster 7",
+		"image": "images/IMG_4789.jpeg",
 		"description": "Another poster description.",
-		"tags": ["vintage"]
+		"tags": ["product", "social", "event"]
 	},
 	{
 		"id": 8,
-		"title": "Poster 8",
-		"image": "images/emptyposter.png",
+		"title": "Clara La San - Poster 8",
+		"image": "images/IMG_4790.jpeg",
 		"description": "Another poster description.",
-		"tags": ["vintage"]
+		"tags": ["music"]
 	},
 	{
 		"id": 9,
-		"title": "Poster 9",
-		"image": "images/emptyposter.png",
+		"title": "Flavour Mania - Poster 9",
+		"image": "images/IMG_4791.jpeg",
 		"description": "Another poster description.",
-		"tags": ["vintage"]
+		"tags": ["product"]
 	},
 	{
 		"id": 10,
-		"title": "Poster 10",
-		"image": "images/emptyposter.png",
+		"title": "Red - Poster 10",
+		"image": "images/IMG_4795.jpeg",
 		"description": "Another poster description.",
-		"tags": ["vintage"]
+		"tags": ["music"]
+	},
+	{
+		"id": 11,
+		"title": "Christmas - Poster 11",
+		"image": "images/IMG_4796.jpeg",
+		"description": "Another poster description.",
+		"tags": ["product"]
+	},
+	{
+		"id": 12,
+		"title": "Mighty Protein - Poster 12",
+		"image": "images/IMG_4798.jpeg",
+		"description": "Another poster description.",
+		"tags": ["product"]
+	},
+	{
+		"id": 13,
+		"title": "WWF - Poster 13",
+		"image": "images/IMG_4799 (1).jpeg",
+		"description": "Another poster description.",
+		"tags": ["product", "social"]
+	},
+	{
+		"id": 14,
+		"title": "WIT - Poster 14",
+		"image": "images/IMG_4799.jpeg",
+		"description": "Another poster description.",
+		"tags": [""]
+	},
+	{
+		"id": 15,
+		"title": "PRESSA - Poster 15",
+		"image": "images/IMG_4802.jpeg",
+		"description": "Another poster description.",
+		"tags": ["music"]
+	},
+	{
+		"id": 16,
+		"title": "AUSTRA - Poster 16",
+		"image": "images/IMG_4803.jpeg",
+		"description": "Another poster description.",
+		"tags": ["music"]
+	},
+	{
+		"id": 17,
+		"title": "fred victor - Poster 17",
+		"image": "images/IMG_4804.jpeg",
+		"description": "Another poster description.",
+		"tags": ["social"]
+	},
+	{
+		"id": 18,
+		"title": "DAVID BLACKWOOD - Poster 18",
+		"image": "images/IMG_4805.jpeg",
+		"description": "Another poster description.",
+		"tags": ["product"]
+	},
+	{
+		"id": 19,
+		"title": "Price Tag - Poster 19",
+		"image": "images/IMG_4806.jpeg",
+		"description": "Another poster description.",
+		"tags": ["social"]
 	}
 ]
