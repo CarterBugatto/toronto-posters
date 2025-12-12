@@ -15,7 +15,12 @@
 
 	<main>
 		<h1>Gallery</h1>
-
+		
+		<div id="filter-bar">
+			<label><input type="checkbox" value="vintage"> Vintage</label>
+			<label><input type="checkbox" value="colorful"> Colorful</label>
+		</div>
+		
 		<div id="gallery-grid" class="img-grid"></div>
 	</main>
 
@@ -33,20 +38,50 @@
 
 	<script src="scroll-animate.js"></script>
 
-	<script>
-		// Load posters dynamically
-		fetch("posters.json")
-			.then(res => res.json())
-			.then(posters => {
-				const grid = document.getElementById("gallery-grid");
-				
-				grid.innerHTML = posters.map(p => `
-					<a href="gallery-inspect.html?id=${p.id}">
-						<img src="${p.image}" alt="${p.title}">
-					</a>
-				`).join("");
-			});
-	</script>
+<script>
+fetch("posters.json")
+	.then(res => res.json())
+	.then(posters => {
+		const grid = document.getElementById("gallery-grid");
+		const filterInputs = document.querySelectorAll("#filter-bar input[type='checkbox']");
+
+		function render(list) {
+			grid.innerHTML = list.map(p => `
+				<a href="gallery-inspect.html?id=${p.id}">
+					<img src="${p.image}" alt="${p.title}">
+				</a>
+			`).join("");
+		}
+
+		function filterPosters() {
+			// get checked tags
+			const activeTags = Array.from(filterInputs)
+				.filter(input => input.checked)
+				.map(input => input.value);
+
+			// no tags checked, show all
+			if (activeTags.length === 0) {
+				render(posters);
+				return;
+			}
+
+			// filter posters by tags
+			const filtered = posters.filter(poster =>
+				poster.tags && poster.tags.some(tag => activeTags.includes(tag))
+			);
+			render(filtered);
+		}
+
+		// attach listener if there are checkboxes
+		filterInputs.forEach(input => input.addEventListener("change", filterPosters));
+
+		// initial render
+		render(posters);
+	});
+</script>
+
+
+
 
 </body>
 </html>

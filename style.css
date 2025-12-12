@@ -20,12 +20,20 @@
 	flex-shrink: 0;
 }
 
+html, body {
+	height: 100%;        /* full height of viewport */
+	margin: 0;
+}
+
 body {
 	font-family: "Inter", inter, sans-serif;
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-top: 0px;
 	margin-bottom: 0px;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 main {
@@ -34,6 +42,7 @@ main {
 	margin-top: 20px;
 	margin-bottom: 40px;
 	line-height: 22px;
+	flex: 1;
 }
 
 footer {
