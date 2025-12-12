@@ -417,6 +417,19 @@ footer a {
 	opacity: 1;
 }
 
+.title-text{
+	font-size: 30px;
+}
+
+.footer-txt{
+	display: flex;
+	justify-content: center;  /* centers items horizontally */
+	align-items: center;      /* centers items vertically if needed */
+	gap: 20px;                /* optional spacing between links */
+	flex-wrap: wrap;          /* allows wrapping on small screens */
+	text-align: center;       /* fallback for inline text */
+}
+
 @media screen and (max-width: 1023px) {
 	.banner {
 		height: 60vh;
@@ -445,7 +458,6 @@ footer a {
 		text-align: center;
 	}
 }
-
 @media screen and (max-width: 780px) {
 	.banner {
 		height: 40vh;
@@ -525,8 +537,10 @@ footer a {
 		margin: 0 100px;
 	}
 	main {
-		margin-left: 2px;
-		margin-right: 2px;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-left: 5px;
+		margin-right: 5px;
 		line-height: 22px;
 	}
 	.dropdown {
@@ -539,6 +553,9 @@ footer a {
 		font-size: 12px;
 		line-height: 15px;
 		padding-left: 10px
+	}
+	.title-text{
+	font-size: 16px;
 	}
 }
 
