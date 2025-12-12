@@ -14,11 +14,12 @@
 	<div id="header"></div>
 
 	<main>
-		<h1>Gallery</h1>
+	
+		<h1 class="main-title">Gallery</h1>
 		
-		<div id="filter-bar">
-			<label><input type="checkbox" value="vintage"> Vintage</label>
-			<label><input type="checkbox" value="colorful"> Colorful</label>
+		<div class="checkbox" id="filter-bar">
+			<label><input class="checkbox-box" type="checkbox" value="vintage"> Vintage</label>
+			<label><input class="checkbox-box" type="checkbox" value="colorful" > Colorful</label>
 		</div>
 		
 		<div id="gallery-grid" class="img-grid"></div>
@@ -54,23 +55,20 @@ fetch("posters.json")
 		}
 
 		function filterPosters() {
-			// get checked tags
-			const activeTags = Array.from(filterInputs)
-				.filter(input => input.checked)
-				.map(input => input.value);
+    const activeTags = Array.from(filterInputs)
+        .filter(input => input.checked)
+        .map(input => input.value);
 
-			// no tags checked, show all
-			if (activeTags.length === 0) {
-				render(posters);
-				return;
-			}
+    if (activeTags.length === 0) {
+        render(posters);
+        return;
+    }
 
-			// filter posters by tags
-			const filtered = posters.filter(poster =>
-				poster.tags && poster.tags.some(tag => activeTags.includes(tag))
-			);
-			render(filtered);
-		}
+    const filtered = posters.filter(poster =>
+        poster.tags && activeTags.every(tag => poster.tags.includes(tag))
+    );
+    render(filtered);
+}
 
 		// attach listener if there are checkboxes
 		filterInputs.forEach(input => input.addEventListener("change", filterPosters));
