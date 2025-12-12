@@ -12,26 +12,40 @@
 
 /* hide checkbox */
 /* Hide the checkbox itself */
+/* hide checkbox */
 .toggle-dark {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
 
-/* toggle button */
+/* toggle button as image */
 .toggle-btn {
-	position: fixed;
-	bottom: 25px;
-	right: 25px;   /* move to bottom */      /* move to left */
+  position: fixed;
+
+  bottom: 25px;
+  right: 25px;
+	
+	height: 40px;
+	width: 40px;
+
+  padding: 0;        /* remove padding so image fits exactly */
   
-  background: grey;
-  color: var(--bg);
-  padding: 25px 25px;
-  border-radius: 50px;
+  background: url('images/invert-color.svg') no-repeat center center;
+  background-size: cover;  /* scale image to fit button */
+
+	
   cursor: pointer;
   z-index: 9999;
+	
+	filter: drop-shadow(0 0 3px var(--bg));
+  transition: filter 0.2s ease;
 }
 
+site{
+	display: flex;
+	flex-direction: column;
+}
 
 /* THIS is the important part */
 .toggle-dark:checked ~ .site {
@@ -84,14 +98,13 @@ body {
 	margin-bottom: 0;
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
 }
 
 main {
 	margin-left: 35px;
 	margin-right: 35px;
-	margin-top: 20px;
-	margin-bottom: 40px;
+	margin-top: 15px;
+	margin-bottom: 60px;
 	line-height: 22px;
 	flex: 1;
 }
@@ -102,6 +115,7 @@ footer {
 	padding: 25px;
 	clear: both;
 	text-align: center;
+
 }
 
 .site-title {
