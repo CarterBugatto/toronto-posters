@@ -8,53 +8,17 @@
 	<title>PostersofToronto</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="scroll-animate.css">
-
 </head>
 
 <body>
 	<div id="header"></div>
+
 	<main>
 		<h1>Gallery</h1>
-			<div class="img-grid">
-				<a href="gallery-inspect.html">
-					<img src="images/emptyposter.png">
-				</a>
-				<a href="gallery-inspect.html">
-					<img src="images/emptyposter.png">
-				</a>
-				<a href="gallery-inspect.html">
-					<img src="images/emptyposter.png">
-				</a>
-				<a href="gallery-inspect.html">
-					<img src="images/emptyposter.png">
-				</a>
-				<a href="gallery-inspect.html">
-					<img src="images/emptyposter.png">
-				</a>
-				<a href="gallery-inspect.html">
-					<img src="images/emptyposter.png">
-				</a>
-				<a href="gallery-inspect.html">
-					<img src="images/emptyposter.png">
-				</a>
-				<a href="gallery-inspect.html">
-					<img src="images/emptyposter.png">
-				</a>
-				<a href="gallery-inspect.html">
-					<img src="images/emptyposter.png">
-				</a>
-				<a href="gallery-inspect.html">
-					<img src="images/emptyposter.png">
-				</a>
-				<a href="gallery-inspect.html">
-					<img src="images/emptyposter.png">
-				</a>
-				<a href="gallery-inspect.html">
-					<img src="images/emptyposter.png">
-				</a>
-			</div>
+
+		<div id="gallery-grid" class="img-grid"></div>
 	</main>
-x
+
 	<footer id="footer"></footer>
 
 	<script>
@@ -66,8 +30,23 @@ x
 			.then(res => res.text())
 			.then(html => document.getElementById('footer').innerHTML = html);
 	</script>
-	
+
 	<script src="scroll-animate.js"></script>
-	
+
+	<script>
+		// Load posters dynamically
+		fetch("posters.json")
+			.then(res => res.json())
+			.then(posters => {
+				const grid = document.getElementById("gallery-grid");
+				
+				grid.innerHTML = posters.map(p => `
+					<a href="gallery-inspect.html?id=${p.id}">
+						<img src="${p.image}" alt="${p.title}">
+					</a>
+				`).join("");
+			});
+	</script>
+
 </body>
 </html>

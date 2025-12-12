@@ -1,27 +1,27 @@
 @font-face {
-  font-family: "Inter";
-  src: url(font/Inter_18pt-Regular.ttf) format("truetype");
-  font-weight: 400; /* regular */
-  font-style: normal;
+	font-family: "Inter";
+	src: url(font/Inter_18pt-Regular.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url(font/Inter_18pt-Bold.ttf) format("truetype");
-  font-weight: 700; /* bold */
-  font-style: normal;
+	font-family: "Inter";
+	src: url(font/Inter_18pt-Bold.ttf) format("truetype");
+	font-weight: 700;
+	font-style: normal;
 }
 
 .header-left .site-title {
-  font-family: "Pixelout", sans-serif;
-  font-size: 28px;
-  color: #000000;
-  text-decoration: none;
-  flex-shrink: 0;                /* logo never shrinks */
+	font-family: "Pixelout", sans-serif;
+	font-size: 28px;
+	color: #000000;
+	text-decoration: none;
+	flex-shrink: 0;
 }
 
 body {
-  font-family: "Inter", inter, sans-serif;
+	font-family: "Inter", inter, sans-serif;
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-top: 0px;
@@ -29,67 +29,72 @@ body {
 }
 
 main {
-			margin-left: 35px;
-			margin-right: 35px;
-			margin-top: 20px;
-			margin-bottom: 40px;
-			line-height: 22px;
-		}		
-footer {
-			background: #000000;
-			color: #000000;
-			padding: 25px;
-			clear: both;
-			text-align: center;
-		}
+	margin-left: 35px;
+	margin-right: 35px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	line-height: 22px;
+}
 
+footer {
+	background: #000000;
+	color: #000000;
+	padding: 25px;
+	clear: both;
+	text-align: center;
+}
 
 .site-title {
-  display: inline-block;   /* prevents collapsing */
-  white-space: nowrap;     /* keeps it on ONE line */
-  position: relative;
-  color: transparent;
-  font-family: "Pixelout", sans-serif;
-  font-size: 28px;
-  text-decoration: none;
+	display: inline-block;
+	white-space: nowrap;
+	position: relative;
+	color: transparent;
+	font-family: "Pixelout", sans-serif;
+	font-size: 28px;
+	text-decoration: none;
 }
+
 .site-title:after {
-  content: "Posters of Toronto";   /* Desktop text */
-  color: #000000;
-  
-  left: 0;
-  top: 0;
+	content: "Posters of Toronto";
+	color: #000000;
+	left: 0;
+	top: 0;
 }
 
-
-.icon{
+.icon {
 	width: 22px;
 }
-footer .nav {	
-			float: none; 
-		}
+
+footer .nav {
+	float: none;
+}
+
 footer a {
-			color: black;
-			text-decoration: none;
-			margin: 0 45px;	
-		}
+	color: black;
+	text-decoration: none;
+	margin: 0 45px;
+}
+
 .center-img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 350px;
 }
+
 .poster-img {
 	width: 22%;
 }
+
 .text {
-  color: #000000;
-  font-size: 15px;
-  padding: 8px 12px;
-  bottom: 8px;
-  width: 100%;
-  text-align: left;
+	color: #000000;
+	font-size: 15px;
+	padding: 8px 12px;
+	bottom: 8px;
+	width: 100%;
+	text-align: left;
 }
+
 .numbertext {
 	color: #f2f2f2;
 	font-size: 12px;
@@ -103,48 +108,54 @@ footer a {
 	flex-wrap: wrap;
 	gap: 9px;
 }
+
 .img-grid a {
 	width: calc(25% - 9px);
 	display: block;
 }
+
 .img-grid img {
 	width: 100%;
 	height: auto;
 	border-radius: 4px;
 	display: block;
 }
+
 .navbar {
-  overflow: hidden;
+	overflow: hidden;
 }
+
 .navbar a {
-  font-size: 16px;
-  text-align: right;
-  text-decoration: none;
+	font-size: 16px;
+	text-align: right;
+	text-decoration: none;
 }
+
 .dropdown {
 	float: right;
 	display: none;
-	
 }
+
 .dropdown .dropbtn {
 	display: flex;
 	border: none;
 	outline: none;
 	color: #000000;
-	padding: 10px 10px;	
+	padding: 10px 10px;
 }
+
 .navbar a:hover, .dropdown:hover .dropbtn {
 	background-color: #cbcbcb;
 	color: #000000;
 	overflow: visible;
-	
 }
+
 .dropdown-content {
-  display: none;
-  background-color: #ffffff;
-  min-width: 100px;
-	
+	display: none;
+	background-color: #ffffff;
+	min-width: 100px;
 }
+
 .dropdown-content a {
 	display: block;
 	color: #000000;
@@ -154,44 +165,116 @@ footer a {
 	overflow: visible;
 	font-weight: bold;
 }
+
 .dropdown-content a:hover {
 	background-color: #cbcbcb;
-	
 }
+
 .dropdown:hover .dropdown-content {
 	display: block;
 }
-.header{
+
+.header {
 	padding-left: 15px;
 }
-.headerlink{
+
+.headerlink {
 	display: flex;
-	padding-right: 10px;
 }
 
-@media (max-width: 768px){
+
+#return-btn-wrap {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 0.5rem;
+	margin-right: 1rem;
+}
+
+.return-btn {
+	display: inline-block;
+	padding: 8px 18px;
+	background: #000000;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+	font-weight: 800;
+}
+
+.return-btn:hover {
+	background: #ffffff;
+	color: #000000;
+	border: 2px solid #000;
+}
+
+#nextprev-btn-wrap {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 0.5rem;
+	margin-right: 1rem;
+}
+
+.nextprev-btn {
+	display: inline-block;
+	padding-left: 60px;
+	background: #ffffff;
+	color: #000000;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 600;
+	text-align: right;
+}
+
+.nextprev-btn:hover {
+	background: #ffffff;
+	color: #b2b2b2;
+}
+
+.top-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.description-box {
+	display: flex;
+	align-items: flex-start;
+	min-width: 0;
+	max-width: 100%;
+}
+
+.description {
+	padding-left: 40px;
+	flex: 1;
+	min-width: 0;
+	white-space: normal;
+	word-wrap: break-word;
+}
+
+
+@media (max-width: 768px) {
 	.text {
-		font-size:18px;
+		font-size: 18px;
 	}
-
 }
-@media (max-width: 600px){
+
+@media (max-width: 600px) {
 	.text {
-		font-size:16px;
+		font-size: 16px;
 	}
 	main {
-			margin-left: 15px;
-			margin-right: 15px;
-			line-height: 23px;
-		}
+		margin-left: 15px;
+		margin-right: 15px;
+		line-height: 23px;
+	}
 	.img-grid a {
 		width: calc(33.333% - 9px);
 	}
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
 	.text {
-		font-size:18px;
+		font-size: 18px;
 	}
 	.site-title:after {
 		content: "PT";
@@ -209,15 +292,16 @@ footer a {
 		width: 100%;
 	}
 }
-@media (max-width: 320px){
-	.headerlink{
+
+@media (max-width: 320px) {
+	.headerlink {
 		display: none;
 	}
 	dropdown flexbox {
 		display: noneock;
 	}
 	.text {
-		font-size:12px;
+		font-size: 12px;
 	}
 	.center-img {
 		width: 220px;
@@ -226,248 +310,205 @@ footer a {
 		margin: 0 100px;
 	}
 	main {
-		margin-left: 0px;
-		margin-right: 0px;
-		line-height: 22px;	
+		margin-left: 2px;
+		margin-right: 2px;
+		line-height: 22px;
 	}
 	.dropdown {
 		display: flex;
 	}
-		
+	.nextprev-btn{
+		padding-left: 20px;
+	}
+	.description{
+		font-size: 12px;
+		line-height: 15px;
+		padding-left: 10px
+	}
 }
 
 .background-text {
 	font-family: "Pixelout", sans-serif;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  padding: 0;
-	
-  font-size: 25vw;        /* huge responsive size */
-  font-weight: 100;
-  line-height: 0.5;
-  color: rgb(168, 204, 225);
-
-  pointer-events: none;
-  user-select: none;
-  white-space: nowrap;
-
-  z-index: -100;             /* behind everything */
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 25vw;
+	font-weight: 100;
+	line-height: 0.5;
+	color: rgb(168, 204, 225);
+	pointer-events: none;
+	user-select: none;
+	white-space: nowrap;
+	z-index: -100;
 }
 
 @font-face {
-  font-family: "Pixelout";
-  src: url("font/Pixelout.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+	font-family: "Pixelout";
+	src: url("font/Pixelout.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
 }
 
-/* Pixelout font for logo */
 @font-face {
-  font-family: "Pixelout";
-  src: url("font/Pixelout.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+	font-family: "Pixelout";
+	src: url("font/Pixelout.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
 }
 
-/* Header container */
 .header-container {
-  display: flex;
-  align-items: center;           /* vertical center logo + nav */
-  justify-content: space-between;/* logo left, nav right */
-  flex-wrap: wrap;               /* allow wrapping if needed */
-  background: #ffffff;
-  color: white;
-  padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	background: #ffffff;
+	color: white;
+	padding: 20px;
 }
 
 .header-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;   
-	font-weight: bold;/* spacing between links + dropdown */
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-weight: bold;
 }
 
 .headerlink a {
-  color: #000000;
-  text-decoration: none;
-  font-size: 16px;
+	color: #000000;
+	text-decoration: none;
+	font-size: 16px;
 	margin-right: 12px;
 }
 
-/* Dropdown styling (keeps your existing dropdown) */
 .navbar .dropbtn {
-  background: none;
-  border: none;
-  cursor: pointer;
+	background: none;
+	border: none;
+	cursor: pointer;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .header-right {
-    flex-wrap: wrap;                /* allow nav to wrap if needed */
-  }
+	.header-right {
+		flex-wrap: wrap;
+	}
 }
 
-
-.banner{
-    width: 100%;
-    height: 110vh;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
+.banner {
+	width: 100%;
+	height: 110vh;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
 }
 
-.banner .slider{
-	
-    position: absolute;
-    width: 150px;
-    height: 200px;
-    top: 10%;
-    left: calc(50% - 100px);
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-	
-    opacity: 0;
-    animation: fadeIn 0.1s forwards, autoRun 25s linear infinite;
-    animation-delay: 0s, 0.8s;  /* fade first, then rotate */
-	
-    z-index: 2;
+.banner .slider {
+	position: absolute;
+	width: 150px;
+	height: 200px;
+	top: 10%;
+	left: calc(50% - 100px);
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+	opacity: 0;
+	animation: fadeIn 0.1s forwards, autoRun 25s linear infinite;
+	animation-delay: 0s, 0.8s;
+	z-index: 2;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
 
-@keyframes autoRun{
-    from{
-        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
-    }to{
-        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
-    }
+@keyframes autoRun {
+	from {
+		transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+	}
+	to {
+		transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+	}
 }
 
-.banner .slider .item{
+.banner .slider .item {
 	font-size: 10px;
 	color: black;
-    position: absolute;
-    inset: 0 0 0 0;
-    transform: 
-        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-        translateZ(550px);
+	position: absolute;
+	inset: 0 0 0 0;
+	transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
 }
 
 .banner .slider .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.3;                  /* slightly transparent */
-    transition: opacity 0.1s ease; /* smooth fade */
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.3;
+	transition: opacity 0.1s ease;
 }
 
-.banner .content{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(1400px, 100vw);
-    height: max-content;
-    padding-bottom: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
+.banner .content {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: min(1400px, 100vw);
+	height: max-content;
+	padding-bottom: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1;
 }
 
 .banner .slider .item img:hover {
-    opacity: 1;                     /* fully visible */
-}
-/*
-.banner .content h1{
-    font-family: 'ICA Rubrik';
-    font-size: 16em;
-    line-height: 1em;
-    color: #000000;
-    position: relative;
-}
-.banner .content h1::after{
-    position: absolute;
-    inset: 0 0 0 0;
-    content: attr(data-content);
-    z-index: 2;
-    -webkit-text-stroke: 2px #d2d2d2;
-    color: transparent;
-}
-.banner .content .author{
-    font-family: Poppins;
-    text-align: right;
-    max-width: 200px;
-}
-.banner .content h2{
-    font-size: 3em;
-}
-.banner .content .model{
-    background-image: url(images/model.png);
-    width: 100%;
-    height: 75vh;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-size: auto 130%;
-    background-repeat: no-repeat;
-    background-position: top center;
-    z-index: 1;
-}
-*/
-@media screen and (max-width: 1023px) {
-	.banner{
-		height: 60vh;
-	}
-    .banner .slider{
-        width: 160px;
-        height: 200px;
-        left: calc(50% - 80px);
-    }
-    .banner .slider .item{
-        transform: 
-            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-            translateZ(300px);
-    }
-    .banner .content h1{
-        text-align: center;
-        width: 100%;
-        text-shadow: 0 10px 20px #000;
-        font-size: 7em;
-    }
-    .banner .content .author{
-        color: #fff;
-        padding: 10px;
-        text-shadow: 0 10px 20px #000;
-        z-index: 2;
-        max-width: unset;
-        width: 100%;
-        text-align: center;
-    }
-}
-@media screen and (max-width: 780px) {
-	.banner{
-		height: 40vh;
-	}
-    .banner .slider{
-        width: 100px;
-        height: 150px;
-        left: calc(50% - 50px);
-    }
-    .banner .slider .item{
-        transform: 
-            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-            translateZ(200px);
-    }
-    .banner .content h1{
-        font-size: 5em;
-    }
+	opacity: 1;
 }
 
+
+
+@media screen and (max-width: 1023px) {
+	.banner {
+		height: 60vh;
+	}
+	.banner .slider {
+		width: 160px;
+		height: 200px;
+		left: calc(50% - 80px);
+	}
+	.banner .slider .item {
+		transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
+	}
+	.banner .content h1 {
+		text-align: center;
+		width: 100%;
+		text-shadow: 0 10px 20px #000;
+		font-size: 7em;
+	}
+	.banner .content .author {
+		color: #fff;
+		padding: 10px;
+		text-shadow: 0 10px 20px #000;
+		z-index: 2;
+		max-width: unset;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.banner {
+		height: 40vh;
+	}
+	.banner .slider {
+		width: 100px;
+		height: 150px;
+		left: calc(50% - 50px);
+	}
+	.banner .slider .item {
+		transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(200px);
+	}
+	.banner .content h1 {
+		font-size: 5em;
+	}
+}

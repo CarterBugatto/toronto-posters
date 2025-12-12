@@ -1,0 +1,62 @@
+[
+	{
+		"id": 1,
+		"title": "Poster 1",
+		"image": "images/emptyposter.png",
+		"description": "This is a description of poster 1.11111111111111111111111111111111111111111111111111111111"
+	},
+	{
+		"id": 2,
+		"title": "Poster 2",
+		"image": "images/emptyposter.png",
+		"description": "Description for poster 2."
+	},
+	{
+		"id": 3,
+		"title": "Poster 3",
+		"image": "images/emptyposter.png",
+		"description": "Another poster description."
+	},
+	{
+		"id": 4,
+		"title": "Poster 4",
+		"image": "images/emptyposter.png",
+		"description": "Another poster description."
+	},
+	{
+		"id": 5,
+		"title": "Poster 5",
+		"image": "images/emptyposter.png",
+		"description": "Another poster description."
+	},
+	{
+		"id": 6,
+		"title": "Poster 6",
+		"image": "images/emptyposter.png",
+		"description": "Another poster description."
+	},
+	{
+		"id": 7,
+		"title": "Poster 7",
+		"image": "images/emptyposter.png",
+		"description": "Another poster description."
+	},
+	{
+		"id": 8,
+		"title": "Poster 8",
+		"image": "images/emptyposter.png",
+		"description": "Another poster description."
+	},
+	{
+		"id": 9,
+		"title": "Poster 9",
+		"image": "images/emptyposter.png",
+		"description": "Another poster description."
+	},
+	{
+		"id": 10,
+		"title": "Poster 10",
+		"image": "images/emptyposter.png",
+		"description": "Another poster description."
+	}
+]

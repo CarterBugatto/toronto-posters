@@ -8,24 +8,33 @@
 	<title>PostersofToronto</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="scroll-animate.css">
-
 </head>
 
 <body>
 
-
 	<div id="header"></div>
-
+	
 	<main>
-		<h1>Gallery Inspect</h1>
+		<div class="top-row">
+			<h3>Poster - Inspect</h3>
+			<div id="return-btn-wrap">
+				<a href="gallery.html" class="return-btn"> Return to Gallery</a>
+			</div>
+		</div>
 		
-		<h2>Poster 1</h2>
+		<div class="top-row">
+			<h2 id="poster-title">Poster</h2>
+			<div id="nextprev-btn-wrap">
+				<a id="prev-btn" class="nextprev-btn" href="#">Previous</a>
+				<a id="next-btn" class="nextprev-btn" href="#">Next</a>
+			</div>
+		</div>
 		
-		<div>
-			<img src="images/emptyposter.png" style="width:40%">
+		<div class="description-box">
+			<img id="poster-image" src="images/emptyposter.png" style="width:40%">
+			<p class="description" id="poster-description"></p>
 		</div>
 	</main>
-
 
 	<footer id="footer"></footer>
 
@@ -37,8 +46,46 @@
 			.then(res => res.text())
 			.then(html => document.getElementById('footer').innerHTML = html);
 	</script>
-	
+
 	<script src="scroll-animate.js"></script>
-	
+
+	<script>
+const params = new URLSearchParams(window.location.search);
+const id = parseInt(params.get("id"));
+
+fetch("posters.json")
+	.then(res => res.json())
+	.then(posters => {
+		const poster = posters.find(p => p.id === id);
+
+		if (!poster) {
+			document.getElementById("poster-title").textContent = "Poster not found";
+			return;
+		}
+
+		document.getElementById("poster-title").textContent = poster.title;
+		document.getElementById("poster-description").textContent = poster.description;
+		document.getElementById("poster-image").src = poster.image;
+
+		const currentIndex = posters.findIndex(p => p.id === id);
+
+		const prevBtn = document.getElementById("prev-btn");
+		const nextBtn = document.getElementById("next-btn");
+
+		if (currentIndex > 0) {
+			prevBtn.href = `gallery-inspect.html?id=${posters[currentIndex - 1].id}`;
+		} else {
+			prevBtn.style.visibility = "hidden";
+		}
+
+		if (currentIndex < posters.length - 1) {
+			nextBtn.href = `gallery-inspect.html?id=${posters[currentIndex + 1].id}`;
+		} else {
+			nextBtn.style.visibility = "hidden";
+		}
+	});
+</script>
+
+
 </body>
 </html>
