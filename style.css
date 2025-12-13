@@ -177,7 +177,7 @@ footer a {
 .text {
 	color: var(--text);
 	font-size: 15px;
-	padding: 8px 12px;
+	padding: 8px 8px;
 	bottom: 8px;
 	width: 100%;
 	text-align: left;
@@ -672,6 +672,13 @@ footer a {
 	}
 	.main-title{
 		font-size: 30px;
+	}
+	.return-btn{
+		display: inline-block;
+		padding: 12px 14px;
+		text-decoration: none;
+		font-size: 12px;
+		font-weight: 2000;
 	}
 }
 
