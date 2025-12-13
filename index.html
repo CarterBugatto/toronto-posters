@@ -11,8 +11,7 @@
 	<link rel="stylesheet" href="scroll-animate.css">
 </head>
 	
-<body>
-	
+<body>	
 	<input type="checkbox" id="toggle-dark" class="toggle-dark">
 	<label for="toggle-dark" class="toggle-btn"></label>
 	<div class="site">
@@ -85,6 +84,7 @@
 					</a>
 						RED
 				</div>
+				<!-- Image Carosuel Previews with link to corresponding inspect pages !-->
 			</div>
 		</div>
 			<p style="text-align:center">
@@ -98,13 +98,15 @@
 		<br>
 		
 		<h3 style="padding-left: 12px;">What will you find on this site...</h3>
-		<p class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc
-		</p>
+		<p class="text">This site is a gallery-based archive of photographs taken by me of Toronto street posters taken between October and December. This site allows the filtration and inspection of these images through an interactive website format. This site aids tehse posters with history in-context and applies my personal analysis of posters as a medium and form of expression in design.</p>
+		<h3 style="padding-left: 12px;">Posters</h3>
+		<p class="text">Walking around downtown Toronto you will notice a distinct form of advertising. A form of advertising you may only see in some of the largest, most distinct cities in the world. Also common in cities like New York and London is the street poster or sets of street posters. Always bold and unique to capture your attention but always new and cycling. This focus on distinct graphic design and subject matter made the street poster a perfect scope of items to explore within this site.</p>
 	</main>
 
 	<footer id="footer"></footer>
 
 	<script>
+		<!-- Getting Footer and Header assets from seperate pages !-->
 		fetch('header.html')
 			.then(res => res.text())
 			.then(html => document.getElementById('header').innerHTML = html);
@@ -126,7 +128,8 @@
 const toggle = document.getElementById("toggle-dark");
 const site = document.querySelector(".site");
 
-// Apply saved preference on page load
+<!-- Checking property of if darkMode is active across pages !-->
+	
 if (localStorage.getItem("darkMode") === "enabled") {
   toggle.checked = true;
   site.style.setProperty('--bg', '#000000');
@@ -134,23 +137,22 @@ if (localStorage.getItem("darkMode") === "enabled") {
   site.style.setProperty('--accent', 'rgb(241, 145, 160)');
 }
 
-// Save preference when toggled
+	
 toggle.addEventListener("change", () => {
-  if (toggle.checked) {
-    localStorage.setItem("darkMode", "enabled");
-    site.style.setProperty('--bg', '#000000');
-    site.style.setProperty('--text', '#ffffff');
-    site.style.setProperty('--accent', 'rgb(241, 145, 160)');
-  } else {
-    localStorage.setItem("darkMode", "disabled");
-    site.style.setProperty('--bg', 'white');
-    site.style.setProperty('--text', 'black');
-    site.style.setProperty('--accent', 'rgb(145, 205, 241)');
+if (toggle.checked) {
+	localStorage.setItem("darkMode", "enabled");
+	site.style.setProperty('--bg', '#000000');
+	site.style.setProperty('--text', '#ffffff');
+	site.style.setProperty('--accent', 'rgb(241, 145, 160)');
+} else {
+	localStorage.setItem("darkMode", "disabled");
+	site.style.setProperty('--bg', 'white');
+	site.style.setProperty('--text', 'black');
+	site.style.setProperty('--accent', 'rgb(145, 205, 241)');
   }
 });
-</script>
-
-	
+</script>	
 </div>	
+	
 </body>
 </html>

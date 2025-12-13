@@ -8,67 +8,71 @@
 	<title>PostersofToronto</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="scroll-animate.css">
-
 </head>
 
 <body>
+	
+	<!--
+	Grassroots Advertising Inc. “Wildposting® Toronto.”
+	Grassroots Advertising.
+	https://grassrootsadvertising.com/canada/toronto/wildposting
+	-->
 	
 	<input type="checkbox" id="toggle-dark" class="toggle-dark">
 	<label for="toggle-dark" class="toggle-btn"></label>
 	<div class="site">
 		
-	<div id="header"></div>
+		<div id="header"></div>
 
+		<main>
+			<h1 class="main-title">History</h1>
+			<h3 style="padding-left: 8px;">About Posters</h3>
+			<p class="text"><b>1950’s to 1990’s:</b> Street posters have historically been used in urban environments since the 19th century. Posters have been a primary way to spread propaganda and political messages specifically during the world wars where they were core for generating patriotism. These posters would be set in rows and columns across cities on walls of buildings and construction sites. Usually flashy in design with bold catchy text and memorable imagery. The typical set of street posters you would see today in Toronto date back to the 1950’s. At the time posters were a cheap and effective way to spread messages about business, arts and politics and the regulations had not yet been in place. This meant a flurry of posters of varied sizes and quantities on every surface. Posters acted as a way for the Toronto residents and workers to express and share publicly as individuals and groups with agencies. Activists believed in fighting for the rights to posters and in 1993 had the Canadian Supreme Court rule in favor of protecting posters under the Canadian Charter of RIghts and Freedom’s.</p>
+			
+			<img class="center-img" src="images/toronto_5-1-2.jpg">
+			<p class="text" style="text-align: center;">Photograph via Grassroots Advertising Inc.</p>
+			
+			<p class="text"><b>2010 - Present Day:</b> In 2010 the City of Toronto would ban and fine the installation of posters outside of confined areas. This included the exclusion of surfaces like poles, transit shelters and parking meters. They would then install message boards that would quickly get covered by a plethora of stapled posters as they provided little space for expression. The large posters seen in this site were then bought out by the WildPosting company to limit posters to those that would pay the company for a term. This ends up having large companies cooperate with WildPosting buying up the space and time for their varied event notices and products. Despite the constant cycling of street posters they still somehow end up feeling like a relic of a past consumerist society. With social media advertisements and notices don't need to be spread throughout the physical metropolitan markets. These posters act as expression through variety but shed light on the loss of individuality and self-expression in graphic design.</p>
+		</main>
 
-	<main>
-       <h1 class="main-title">History</h1>
-		<h3 style="padding-left: 8px;">About Posters</h3>
-		<p class="text">Walking around downtown Toronto you will notice a distinct form of advertising. A form of advertising you may only see in some of the largest, most distinct cities in the world. Also common in cities like New York and London is the street poster or sets of street posters. Always bold and unique to capture your attention but always new and cycling. This focus on distinct graphic design and subject matter made the street poster a perfect scope of items to explore within this site.</p>
-		
-	</main>
+		<footer id="footer"></footer>
 
-	<footer id="footer"></footer>
-
-	<script>
-
-		fetch('header.html')
-			.then(res => res.text())
-			.then(html => document.getElementById('header').innerHTML = html);
-
-
-		fetch('footer.html')
-			.then(res => res.text())
-			.then(html => document.getElementById('footer').innerHTML = html);
-	</script>
-
-	<script src="scroll-animate.js"></script>
 		<script>
-const toggle = document.getElementById("toggle-dark");
-const site = document.querySelector(".site");
+			fetch('header.html')
+				.then(res => res.text())
+				.then(html => document.getElementById('header').innerHTML = html);
 
-// Apply saved preference on page load
-if (localStorage.getItem("darkMode") === "enabled") {
-  toggle.checked = true;
-  site.style.setProperty('--bg', '#000000');
-  site.style.setProperty('--text', '#ffffff');
-  site.style.setProperty('--accent', 'rgb(241, 145, 160)');
-}
+			fetch('footer.html')
+				.then(res => res.text())
+				.then(html => document.getElementById('footer').innerHTML = html);
+		</script>
 
-// Save preference when toggled
-toggle.addEventListener("change", () => {
-  if (toggle.checked) {
-    localStorage.setItem("darkMode", "enabled");
-    site.style.setProperty('--bg', '#000000');
-    site.style.setProperty('--text', '#ffffff');
-    site.style.setProperty('--accent', 'rgb(241, 145, 160)');
-  } else {
-    localStorage.setItem("darkMode", "disabled");
-    site.style.setProperty('--bg', 'white');
-    site.style.setProperty('--text', 'black');
-    site.style.setProperty('--accent', 'rgb(145, 205, 241)');
-  }
-});
-</script>
+		<script src="scroll-animate.js"></script>
+		<script>
+			const toggle = document.getElementById("toggle-dark");
+			const site = document.querySelector(".site");
+
+			if (localStorage.getItem("darkMode") === "enabled") {
+				toggle.checked = true;
+				site.style.setProperty('--bg', '#000000');
+				site.style.setProperty('--text', '#ffffff');
+				site.style.setProperty('--accent', 'rgb(241, 145, 160)');
+			}
+
+			toggle.addEventListener("change", () => {
+				if (toggle.checked) {
+					localStorage.setItem("darkMode", "enabled");
+					site.style.setProperty('--bg', '#000000');
+					site.style.setProperty('--text', '#ffffff');
+					site.style.setProperty('--accent', 'rgb(241, 145, 160)');
+				} else {
+					localStorage.setItem("darkMode", "disabled");
+					site.style.setProperty('--bg', 'white');
+					site.style.setProperty('--text', 'black');
+					site.style.setProperty('--accent', 'rgb(145, 205, 241)');
+				}
+			});
+		</script>
 	</div>
 </body>
 </html>

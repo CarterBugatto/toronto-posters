@@ -1,45 +1,43 @@
+/*design reference*/
+/*https://muz.li/blog/top-100-most-creative-and-unique-portfolio-websites-of-2024/*/
+/*https://boxbot6.github.io/create-image-gallery-from-the-contents-of-a-website-folder/*/
+/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+/*https://www.w3schools.com/csSref/pr_class_cursor.php*/
+/*https://css-tricks.com/a-complete-guide-to-links-and-buttons/*/
+/*https://stackoverflow.com/questions/4148499/how-to-style-a-checkbox-using-css*/
+
 :root {
-  --bg: white;
-  --text: black;
-  --accent: rgb(145, 205, 241); 
+	--bg: white;
+	--text: black;
+	--accent: rgb(145, 205, 241); 
 }
-
 .dark {
-  --bg: #000000;
-  --text: #ffffff;
-  --accent: rgb(241, 145, 160);
+	--bg: #000000;
+	--text: #ffffff;
+	--accent: rgb(241, 145, 160);
 }
 
-/* hide checkbox */
-/* Hide the checkbox itself */
-/* hide checkbox */
 .toggle-dark {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
 }
 
-/* toggle button as image */
-.toggle-btn {
-  position: fixed;
+/*Setting states for dark mode with variables to control colors/brightness*/
 
-  bottom: 25px;
-  right: 25px;
-	
+.toggle-btn {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
 	height: 40px;
 	width: 40px;
-
-  padding: 0;        /* remove padding so image fits exactly */
-  
-  background: url('images/invert-color.svg') no-repeat center center;
-  background-size: cover;  /* scale image to fit button */
-
-	
-  cursor: pointer;
-  z-index: 9999;
-	
+	padding: 0;
+	background: url('images/invert-color.svg') no-repeat center center;
+	background-size: cover;
+	cursor: pointer;
+	z-index: 9999;
 	filter: drop-shadow(0 0 3px var(--bg));
-  transition: filter 0.2s ease;
+	transition: filter 0.2s ease;
 }
 
 site{
@@ -47,20 +45,19 @@ site{
 	flex-direction: column;
 }
 
-/* THIS is the important part */
 .toggle-dark:checked ~ .site {
-  --bg: #000000;
-  --text: #ffffff;
-  --accent: rgb(241, 145, 160);
+	--bg: #000000;
+	--text: #ffffff;
+	--accent: rgb(241, 145, 160);
 }
 
 body, .site {
-  background: var(--bg);
-  color: var(--text);
+	background: var(--bg);
+	color: var(--text);
 }
 
 h1, h2, p, a, button, input {
-  color: var(--text);
+	color: var(--text);
 }
 
 @font-face {
@@ -70,12 +67,16 @@ h1, h2, p, a, button, input {
 	font-style: normal;
 }
 
+/*via Google Fonts https://fonts.google.com/specimen/Inter*/
+
 @font-face {
 	font-family: "Inter";
 	src: url(font/Inter_18pt-Bold.ttf) format("truetype");
 	font-weight: 700;
 	font-style: normal;
 }
+
+/*Importing Fonts*/
 
 .header-left .site-title {
 	font-family: "Pixelout", sans-serif;
@@ -85,8 +86,10 @@ h1, h2, p, a, button, input {
 	flex-shrink: 0;
 }
 
+/*via Dafont typealiens, https://www.dafont.com/pixelout.font*/
+
 html, body {
-	height: 100%;        /* full height of viewport */
+	height: 100%;
 	margin: 0;
 }
 
@@ -115,7 +118,6 @@ footer {
 	padding: 25px;
 	clear: both;
 	text-align: center;
-
 }
 
 .site-title {
@@ -146,7 +148,6 @@ footer {
 footer .nav {
 	float: none;
 }
-
 
 footer a {
 	color: var(--text);
@@ -188,6 +189,7 @@ footer a {
 	background-color: var(--bg);
 	color: var(--text);
 }
+
 .button:hover{
 	text-decoration: none;
 	background-color: var(--accent);
@@ -206,8 +208,9 @@ footer a {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 9px;
-	
 }
+
+/*Creating grid for images using flex/flexbox*/
 
 .img-grid a {
 	width: calc(25% - 9px);
@@ -219,9 +222,9 @@ footer a {
 	height: auto;
 	border-radius: 4px;
 	display: block;
-	opacity: 1;   
-	filter: none;        /* remove any inherited brightness / grayscale */
-    transition: none;
+	opacity: 1;
+	filter: none;
+	transition: none;
 }
 
 .navbar {
@@ -285,12 +288,9 @@ footer a {
 	display: flex;
 }
 
-
 #return-btn-wrap {
 	display: flex;
 	justify-content: flex-end;
-	margin-top: 0.5rem;
-	margin-right: 1rem;
 }
 
 .return-btn {
@@ -313,8 +313,6 @@ footer a {
 #nextprev-btn-wrap {
 	display: flex;
 	justify-content: flex-end;
-	margin-top: 0.5rem;
-	margin-right: 1rem;
 }
 
 .nextprev-btn {
@@ -425,8 +423,6 @@ footer a {
 	cursor: pointer;
 }
 
-
-
 .banner {
 	width: 100%;
 	height: 110vh;
@@ -449,10 +445,15 @@ footer a {
 	z-index: 2;
 }
 
+/*3D rotating image Slider*/
+/*https://www.lundevweb.com/2024/06/creating-3d-image-slider-with-css-only.html*/
+
 @keyframes fadeIn {
 	from { opacity: 0; }
 	to { opacity: 1; }
 }
+
+/*Fade Animation*/
 
 @keyframes autoRun {
 	from {
@@ -511,6 +512,7 @@ footer a {
 	text-align: center;
 	color: var(--bg);
 }
+
 .main-title{
 	padding-top: 0;
 	margin-top: 0;
@@ -523,9 +525,11 @@ footer a {
 	justify-content: right;
 	display: flex;
 	font-weight: bold;
+	/*Customization of checkbox*/
 	accent-color: var(--text);
 }
 
+/*Responsiveness*/
 @media screen and (max-width: 1023px) {
 	.banner {
 		height: 60vh;
@@ -554,6 +558,7 @@ footer a {
 		text-align: center;
 	}
 }
+
 @media screen and (max-width: 780px) {
 	.banner {
 		height: 40vh;
@@ -661,11 +666,10 @@ footer a {
 	}
 	.description-box{
 		display: flex;
-    	flex-direction: column;
-
+		flex-direction: column;
 	}
 	.title-text{
-	font-size: 16px;
+		font-size: 16px;
 	}
 	.checkbox{
 		font-size: 20px;
@@ -681,6 +685,3 @@ footer a {
 		font-weight: 2000;
 	}
 }
-
-
-

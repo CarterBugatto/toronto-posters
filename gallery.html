@@ -2,6 +2,7 @@
 <html lang="en">
 	
 <head>
+	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,104 +16,104 @@
 	<label for="toggle-dark" class="toggle-btn"></label>
 	<div class="site">
 	
-	<div id="header"></div>
+		<div id="header"></div>
+		<main>
+			<h1 class="main-title">Gallery</h1>
+			
+			<div class="checkbox" id="filter-bar">
+				<label><input class="checkbox-box" type="checkbox" value="music"> Music</label>
+				<label><input class="checkbox-box" type="checkbox" value="event"> Event </label>
+				<label><input class="checkbox-box" type="checkbox" value="product"> Product</label>
+				<label><input class="checkbox-box" type="checkbox" value="social"> Social</label>
+			</div>
+			
+			<!-- Filtering image tags !-->
+			
+			<div id="gallery-grid" class="img-grid"></div>
+		</main>
 
-	<main>
-	
-		<h1 class="main-title">Gallery</h1>
-		
-		<div class="checkbox" id="filter-bar">
-			<label><input class="checkbox-box" type="checkbox" value="music"> Music</label>
-			<label><input class="checkbox-box" type="checkbox" value="event" > Event</label>
-			<label><input class="checkbox-box" type="checkbox" value="product"> Product</label>
-			<label><input class="checkbox-box" type="checkbox" value="social" > Social</label>
-		</div>
-		
-		<div id="gallery-grid" class="img-grid"></div>
-	</main>
+		<footer id="footer"></footer>
 
-	<footer id="footer"></footer>
+		<script>
+			fetch('header.html')
+				.then(res => res.text())
+				.then(html => document.getElementById('header').innerHTML = html);
 
-	<script>
-		fetch('header.html')
-			.then(res => res.text())
-			.then(html => document.getElementById('header').innerHTML = html);
+			fetch('footer.html')
+				.then(res => res.text())
+			
+				.then(html => document.getElementById('footer').innerHTML = html);
+		</script>
 
-		fetch('footer.html')
-			.then(res => res.text())
-			.then(html => document.getElementById('footer').innerHTML = html);
-	</script>
+		<script src="scroll-animate.js"></script>
 
-	<script src="scroll-animate.js"></script>
+		<script>
+			fetch("posters.json")
+				.then(res => res.json())
+				.then(posters => {
+					const grid = document.getElementById("gallery-grid");
+					const filterInputs = document.querySelectorAll("#filter-bar input[type='checkbox']");
 
-<script>
-fetch("posters.json")
-	.then(res => res.json())
-	.then(posters => {
-		const grid = document.getElementById("gallery-grid");
-		const filterInputs = document.querySelectorAll("#filter-bar input[type='checkbox']");
+					function render(list) {
+						grid.innerHTML = list.map(p => `
+							<a href="gallery-inspect.html?id=${p.id}">
+								<img src="${p.image}" alt="${p.title}">
+							</a>
+						`).join("");
+					}
 
-		function render(list) {
-			grid.innerHTML = list.map(p => `
-				<a href="gallery-inspect.html?id=${p.id}">
-					<img src="${p.image}" alt="${p.title}">
-				</a>
-			`).join("");
-		}
+					function filterPosters() {
+						const activeTags = Array.from(filterInputs)
+							.filter(input => input.checked)
+							.map(input => input.value);
 
-		function filterPosters() {
-    const activeTags = Array.from(filterInputs)
-        .filter(input => input.checked)
-        .map(input => input.value);
+						if (activeTags.length === 0) {
+							render(posters);
+							return;
+						}
 
-    if (activeTags.length === 0) {
-        render(posters);
-        return;
-    }
+						const filtered = posters.filter(poster =>
+							poster.tags && activeTags.every(tag => poster.tags.includes(tag))
+						);
 
-    const filtered = posters.filter(poster =>
-        poster.tags && activeTags.every(tag => poster.tags.includes(tag))
-    );
-    render(filtered);
-}
+						render(filtered);
+					}
 
-		// attach listener if there are checkboxes
-		filterInputs.forEach(input => input.addEventListener("change", filterPosters));
+					filterInputs.forEach(input =>
+						input.addEventListener("change", filterPosters)
+					);
 
-		// initial render
-		render(posters);
-	});
-</script>
+					render(posters);
+				});
+		</script>
+		<script>
+			const toggle = document.getElementById("toggle-dark");
+			const site = document.querySelector(".site");
 
-<script>
-const toggle = document.getElementById("toggle-dark");
-const site = document.querySelector(".site");
+			if (localStorage.getItem("darkMode") === "enabled") {
+				toggle.checked = true;
+				site.style.setProperty('--bg', '#000000');
+				site.style.setProperty('--text', '#ffffff');
+				
+				
+				site.style.setProperty('--accent', 'rgb(241, 145, 160)');
+			}
 
-// Apply saved preference on page load
-if (localStorage.getItem("darkMode") === "enabled") {
-  toggle.checked = true;
-  site.style.setProperty('--bg', '#000000');
-  site.style.setProperty('--text', '#ffffff');
-  site.style.setProperty('--accent', 'rgb(241, 145, 160)');
-}
-
-// Save preference when toggled
-toggle.addEventListener("change", () => {
-  if (toggle.checked) {
-    localStorage.setItem("darkMode", "enabled");
-    site.style.setProperty('--bg', '#000000');
-    site.style.setProperty('--text', '#ffffff');
-    site.style.setProperty('--accent', 'rgb(241, 145, 160)');
-  } else {
-    localStorage.setItem("darkMode", "disabled");
-    site.style.setProperty('--bg', 'white');
-    site.style.setProperty('--text', 'black');
-    site.style.setProperty('--accent', 'rgb(145, 205, 241)');
-  }
-});
-</script>
-
-
-</div>
+			toggle.addEventListener("change", () => {
+				if (toggle.checked) {
+					localStorage.setItem("darkMode", "enabled");
+					site.style.setProperty('--bg', '#000000');
+					site.style.setProperty('--text', '#ffffff');
+					site.style.setProperty('--accent', 'rgb(241, 145, 160)');
+				} else {
+					localStorage.setItem("darkMode", "disabled");
+					site.style.setProperty('--bg', 'white');
+					site.style.setProperty('--text', 'black');
+					site.style.setProperty('--accent', 'rgb(145, 205, 241)');
+				}
+			});
+		</script>
+	</div>
 </body>
 </html>
+

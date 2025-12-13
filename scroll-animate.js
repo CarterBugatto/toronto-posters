@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "p, h1, h2, h3, h4, h5, h6, img, blockquote, ol, ul, li, div, a"
   );
 
+  //applying animation to types of listed assets
+  
   els.forEach(el => el.classList.add("scroll-animate"));
 
   const obs = new IntersectionObserver(
@@ -12,3 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   els.forEach(el => obs.observe(el));
 });
+
+//https://blog.webdevsimplified.com/2022-01/intersection-observer/
+//https://stackoverflow.com/questions/65931048/animation-in-html-css-js
